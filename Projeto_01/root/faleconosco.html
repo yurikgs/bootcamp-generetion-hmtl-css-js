@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <div class="container margin-container">
+        <div class="calc-container margin-container">
             <h1> <a href="#">Calculadora de Kwh Online</a></h1>
             <nav>
                 <ul id="navegacao-superior" class="menu">
@@ -35,38 +35,51 @@
         </div>
     </header>
 
-    <section class="margin-container">
+    <section class="coluna-centro margin-container" id="section-contato">
 
-
+        <h2 class="main-title"> Fale conosco!</h2>
         <article class="flex-row" id="article-contato">
 
             <div class="flex-column space-right">
-                <h2>Preencha o Formulário e Mande a sua Mensagem</h2>
-                <form class="formulario-contato">
-                    <label for="nome">Nome: </label>
-                    <input type="text" id="nome">
 
-                    <label for="email">Email: </label>
-                    <input type="email" id="email">
+                <div id="calc-form-container">
 
-                    <label for="mensagem">Mensagem: </label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                    <form class="formulario-contato">
+                        <h2 style="display: block;">Preencha o Formulário e Mande a sua Mensagem</h2>
 
-                    <button>Enviar</button>
-                </form>
+
+                        <label for="nome">Nome: </label>
+                        <input type="text" id="nome" onkeyup='validaNome()' onfocusout='limpaMsgNome()'>
+                        <div id="validaNome"></div>
+
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" onfocusout='validaEmail()'>
+                        <div id="validaEmail"></div>
+
+                        <label for="mensagem">Mensagem: </label>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="10" onkeyup='validaMensagem()'></textarea>
+                        <div id="validaMensagem"></div>
+
+                        <div class="calc-container">
+                            <button onclick='validaForm()'>Enviar</button>
+                        </div>
+
+                    </form>
+                </div>
+
             </div>
             <div class="flex-column space-left" id="mapa-box">
                 <h2>Ou nos encontre em nosso endereço: </h2>
                 <p>Rua Jabaíra, 342 - Oswaldo Cruz, Rio de Janeiro/RJ </p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.0535853366596!2d-43.356187085401295!3d-22.874478842468942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9962e5e693de81%3A0x3b57e14f683776f1!2sR.%20Jabaira%2C%20342%20-%20Oswaldo%20Cruz%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021340-400!5e0!3m2!1spt-BR!2sbr!4v1641872061974!5m2!1spt-BR!2sbr"
-                    width="370" height="310" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    width="370" height="330" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
             </div>
 
         </article>
 
         <footer>
-            <div class="container margin-container">
+            <div class="calc-container margin-container">
                 <p>Calculadora de Kwh</p>
                 <nav>
                     <ul id="navegacao-footer" class="menu">
@@ -92,6 +105,8 @@
         </footer>
 
     </section>
+
+    <script src="./assets/js/script.js"></script>
 
 </body>
 

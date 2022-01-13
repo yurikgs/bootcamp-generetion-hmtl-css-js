@@ -13,7 +13,7 @@ header {
     margin-bottom: 40px;
 }
 
-header .container {
+header .calc-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,9 +84,18 @@ main {
 
 /*Formulário*/
 
+#section-contato {
+    padding-top: 6.5vh;
+}
+
+.coluna-centro h2.main-title {
+    margin-bottom: 4vw;
+    font-size: 1.5em;
+    color: firebrick;
+}
+
 #article-contato {
-    justify-content: center;
-    padding-top: 13vh;
+    justify-content: space-between;
 }
 
 #article-contato h2 {
@@ -97,6 +106,26 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 27vw;
+}
+
+form button {
+    display: block;
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+form>.calc-container {
+    padding: 10px 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 
@@ -117,7 +146,7 @@ footer {
     padding: 60px 0 40px;
 }
 
-footer .container {
+footer .calc-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,7 +202,7 @@ footer .submenu a:active {
 }
 
 .coluna-centro h2 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-bottom: 20px;
 }
 
@@ -187,4 +216,15 @@ footer .submenu a:active {
 
 .footer-spacing {
     margin-bottom: 30px;
+}
+
+
+/* Classes usadas diretamente pelo JS*/
+
+.validacao-ok {
+    color: green;
+}
+
+.validacao-negada {
+    color: red;
 }
